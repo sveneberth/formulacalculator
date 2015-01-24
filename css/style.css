@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+/* ##############################################
+** BASIC HTML TAGS
+** ############################################*/
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 15px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+* {
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: top;
+	margin: 0;
+}
+
+b, strong, th {
+	font-weight: bold;
+}
+
+i, cite, em, var, address, dfn {
+	font-style: italic;
+}
+
+img {
+	max-width: 100%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+td, th, tr {
+	text-align: left;
+	vertical-align: top;
+}
+
+a:link		{color:#0d5fa3;text-decoration:none;}
+a:visited	{color:#0d5fa3;text-decoration:none}
+a:focus		{color:#58aad6;}
+a:hover		{color:#58aad6;text-decoration:underline;}
+a:active	{color:#0d5fa3;}
+
+h1 {font-weight: bold;font-size: 170%;margin: 0 0 15px 0;}
+h2 {font-weight: bold;font-size: 150%;margin: 0 0 15px 0;}
+h3 {font-weight: bold;font-size: 130%;margin: 0 0 05px 0;}
+h4 {font-weight: bold;font-size: 120%;margin: 0 0 05px 0;}
+h5 {font-weight: bold;font-size: 110%;margin: 0 0 05px 0;}
+h6 {font-weight: bold;font-size: 100%;margin: 0 0 05px 0;}
+
+.clickable,
+a,
+label,
+input[type=button],
+input[type=submit],
+input[type=file] {
+	cursor: pointer;
+}
+
+p { 
+	margin: 16px 0;
+}
+
+input, textarea, select {
+	font-family: inherit;
+    font-size: 90%;
+    border: 1px solid #999;
+    color: inherit;
+    padding: 8px 10px;
+	resize: none;
+	background: #fff;
+	width: 400px;
+	box-sizing: border-box;
+	max-width: 100%;
+	margin: 8px 0;
+	display: block;
+	transition: ease border .4s, ease background .2s;
+}
+input:focus, textarea:focus, select:focus {
+	border-color: #244394;
+}
+input.wrong,
+textarea.wrong,
+select.wrong {
+	border: 1px solid #D00D0D;
+	-webkit-animation: wrong .7s 1;
+	-moz-animation: wrong .7s 1;
+}
+@-webkit-keyframes wrong { 
+    0% {
+		transform: scale(0.1, 0.1);
+		opacity: 0;
+	}
+	70% {
+		transform: scale(1.2, 1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+@-moz-keyframes wrong { 
+	0% {
+		-moz-transform: scale(0.1, 0.1);
+		opacity: 0;
+	}
+	70% {
+		-moz-transform: scale(1.2, 1.2);
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: scale(1, 1); 
+	}
+}
+label {
+	margin-bottom: -6px;
+	display: block;
+	font-size: 95%;
+}
+textarea {
+	height: 150px;
+}
+textarea.big {
+	height: 200px;
+	width: 100%;
+}
+
+input[type="submit"] {
+	margin-top: 2em;
+}
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="button"],
+input[type="reset"] {
+	background: #333;
+	color: #e5e5e5;
+	width: auto;
+	cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+	background: #2580a2;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	height: auto;
+}
+input[readonly] {
+	cursor: no-drop;
+}
+
+.clear {
+    clear: both;
+}
