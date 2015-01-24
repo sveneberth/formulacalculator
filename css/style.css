@@ -163,3 +163,53 @@ input[readonly] {
 .clear {
     clear: both;
 }
+
+
+/* ##############################################
+** BASIC LAYOUT
+** ############################################*/
+header {
+	height: 30px;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 5px 20px;
+	background: #1f4ab8;
+	color: #fff;
+}
+
+menu.category {
+	width: 20%;
+	float: left;
+}
+menu.category.ui-accordion .ui-accordion-header {
+	background: #fff;
+}
+menu.category.ui-accordion .ui-accordion-content {
+	background: #eee;
+	padding: 1em 1em;
+}
+menu.category ul {
+	padding: 0;
+	list-style: none;
+}
+menu.category ul li {
+	background: #ddd;
+	padding: .2em .2em .2em .5em;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	margin: 2px 0 0 0;
+	cursor: pointer;
+}
+menu.category ul li:hover {
+	border-color: blue;
+}
+
+section {
+	width: 75%;
+	background: #ccc;
+	float: right;
+	display: block;
+	margin: 2px 2px 0 0;
+	padding: 1em 2em;
+	box-sizing: border-box;
+}
