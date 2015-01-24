@@ -1,12 +1,16 @@
 {
-  "name": "Formula Calculator",
-  "description": "with this App you can calculate math and other formula very easy",
-  "version": "0.1",
-  "manifest_version": 2,
-  "app": {
-    "background": {
-      "scripts": ["js/background.js"]
-    }
-  },
-  "icons": { "16": "icons/calculator-16.png", "128": "icons/calculator-128.png", "512": "icons/calculator-512.png" }
+	"name": "Formula Calculator",
+	"description": "with this App you can calculate math and other formula very easy",
+	"version": "0.1",
+	"manifest_version": 2,
+	"app": {
+		"background": {
+			"scripts": ["js/background.js"]
+		}
+	},
+	"icons": {
+		"16": "icons/calculator-16.png",
+		"128": "icons/calculator-128.png",
+		"512": "icons/calculator-512.png"
+	}
 }
