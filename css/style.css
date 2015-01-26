@@ -233,12 +233,17 @@ menu.category ul li {
 	background: lightgrey;
 	padding: .2em .2em .2em .5em;
 	cursor: pointer;
+	transition: ease background-color .3s;
 }
 menu.category ul li:not(:last-child) {
 	border-bottom: 1px solid darkgrey;
 }
 menu.category ul li:hover {
 	background: lightblue;
+	transition: none;
+}
+menu.category ul li.active {
+	background: darkblue;
 }
 
 .wrapper {

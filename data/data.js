@@ -1,6 +1,6 @@
 var category = 
 {
-	'Maths': ['Area', 'Volume', /*'Length' length != formula */],
+	'Maths': ['Area', 'Volume', 'test )(/&) with ?=) unallowd §$% chars !1!1', /*'Length' length != formula */],
 	'Physics': ['Power', /*'Weight' Weight != formula*/],
 };
 
