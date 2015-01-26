@@ -61,7 +61,7 @@ $(document).ready(function() {
 			
 			$('section.' + compress(section)).append(str);
 			
-			$('section.' + compress(section)).append('<input name="submit_' + key + '" type="button" value="result" /><input name="result_' + key + '" type="number" placeholder="result" readonly />');
+			$('section.' + compress(section)).append('<input style="margin: 0 10px 0 10px;display:inline-block;width:100px;" name="submit_' + key + '" type="button" value="result" />=<input style="margin: 0 0 0 10px;display:inline-block;width:100px;" name="result_' + key + '" type="number" placeholder="result" readonly />');
 			
 		}
 	}
@@ -97,7 +97,7 @@ $(document).ready(function() {
 		console.log(formulaWithValues);
 		console.log(formulaName);
 		
-		
+		console.log(formulaWithValues);
 		var result = Parser.evaluate(formulaWithValues);
 		
 		$('input[name="result_' + formulaName + '"]').val(result);
