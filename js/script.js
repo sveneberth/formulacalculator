@@ -25,7 +25,7 @@ $(document).ready(function() {
 			
 				data += '<li data-value="' + compress(val) + '" data-rubric="' + compress(key) + '">' + val + '</li>';
 				
-				$('.wrapper').append('<section style="display:none;" class="' + compress(val) + '"><h1>' + val + '</h1></section>');
+				$('.wrapper').append('<section style="display:none;" class="' + compress(val) + '" data-original="' + val.replace('"', '&quot;') + '"><h1>' + val + '</h1></section>');
 				
 				fillcontent(val);
 			}
@@ -61,6 +61,8 @@ $(document).ready(function() {
 			
 			$('section.' + compress(section)).append(str);
 			
+			$('section.' + compress(section)).append('<input name="submit_' + key + '" type="button" value="result" /><input name="result_' + key + '" type="number" placeholder="result" readonly />');
+			
 		}
 	}
 	
@@ -77,6 +79,28 @@ $(document).ready(function() {
 			$('section.' + val).fadeIn(300);
 		});
 		
+		
+	});
+	
+	$('section > input[type="button"]').bind('click', function() {
+		var name = $(this).attr('name');
+		var rubric = $(this).parent().attr('data-original');
+		
+		var formulaName = name.substr(7);
+		var thisFormula = formula[rubric][formulaName];
+		
+		
+		var formulaWithValues = thisFormula.replace(/\[(\w+)\]/g, function replacer(all, match){
+			return $('input[name="' + formulaName + '_' + match + '"]').val();
+		});
+		
+		console.log(formulaWithValues);
+		console.log(formulaName);
+		
+		
+		var result = Parser.evaluate(formulaWithValues);
+		
+		$('input[name="result_' + formulaName + '"]').val(result);
 		
 	});
 	
