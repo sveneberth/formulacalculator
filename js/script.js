@@ -35,7 +35,6 @@ $(document).ready(function() {
 			$('menu.category').append(data);
 		}
 		
-		console.log(first);
 		$('.wrapper > section.' + first).show();
 		$('menu.category li[data-value="' + first + '"]').addClass('active');
 		
@@ -60,7 +59,7 @@ $(document).ready(function() {
 				return '<input style="margin: 0;display:inline-block;width:100px;" name="' + key + '_' + match + '" type="number" placeholder="' + match + '" />';
 			});
 			
-			$('section.' + section).append(str);
+			$('section.' + compress(section)).append(str);
 			
 		}
 	}
